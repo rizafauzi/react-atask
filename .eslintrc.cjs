@@ -16,6 +16,7 @@ module.exports = {
     project: true,
     tsconfigRootDir: __dirname,
   },
+  ignorePatterns: ['**/vendor/*.test.ts', '**/vendor/*.test.tsx'],
   plugins: ['react-refresh'],
   rules: {
     'react-refresh/only-export-components': [
@@ -23,5 +24,9 @@ module.exports = {
       { allowConstantExport: true },
     ],
     '@typescript-eslint/no-non-null-assertion': 'off',
+    '@typescript-eslint/no-floating-promises': 'off',
+    '@typescript-eslint/no-non-null-assertion': 'off',
+    '@typescript-eslint/restrict-template-expressions': 'off',
+    '@typescript-eslint/no-empty-interface': 'off',
   },
-}
+};
