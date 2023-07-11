@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom/client';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { createHashRouter, RouterProvider } from 'react-router-dom';
 
-import Home from '@pages/home';
+import HomePage from '@pages/home';
+import NotFoundPage from '@pages/not-found';
 
 import './index.css';
 
@@ -12,13 +13,17 @@ const queryClient = new QueryClient();
 const router = createHashRouter([
   {
     path: '/',
-    element: <Home />,
+    element: <HomePage />,
     children: [
       {
         path: '/:keyword',
-        element: <Home />,
+        element: <HomePage />,
       },
     ],
+  },
+  {
+    path: '*',
+    element: <NotFoundPage />,
   },
 ]);
 
