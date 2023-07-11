@@ -1,6 +1,6 @@
 import { useCallback, useState } from 'react';
 import { styled } from 'styled-components';
-import { Link, useNavigate, useNavigation, useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 
 import { ReactComponent as MagnifierIcon } from '@assets/icons/magnifier.icon.svg';
 import { Button, Header, Input, Layout, Text } from '@components';
