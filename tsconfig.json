@@ -20,6 +20,26 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
+
+  "baseUrl": ".",
+  "paths": {
+    "@/*": ["./src/*"],
+    "@app/*": ["./src/app/*"],
+    "@public/*": ["./public/*"],
+    "@hooks/*": ["./src/hooks/*"],
+    "@utils/*": ["./src/utils/*"],
+    "@api/*": ["./src/app/api/*"],
+    "@styles/*": ["./src/styles/*"],
+    "@assets/*": ["./src/assets/*"],
+    "@pages/*": ["./src/pages/*"],
+    "@types/*": ["./src/@types/*"],
+    "@routes/*": ["./src/routes/*"],
+    "@configs/*": ["./src/configs/*"],
+    "@services/*": ["./src/services/*"],
+    "@components": ["./src/components"],
+    "@constants/*": ["./src/constants/*"],
+    "@components/*": ["./src/components/*"]
+  },
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
