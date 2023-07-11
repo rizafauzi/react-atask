@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
-import Root from '@routes/root';
+import Home from '@pages/home';
 
 import './index.css';
 
@@ -12,11 +12,11 @@ const queryClient = new QueryClient();
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Root />,
+    element: <Home />,
     children: [
       {
         path: '/:keyword',
-        element: <Root />,
+        element: <Home />,
       },
     ],
   },

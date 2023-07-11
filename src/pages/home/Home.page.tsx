@@ -1,41 +1,55 @@
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 import { styled } from 'styled-components';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useNavigate, useNavigation, useParams } from 'react-router-dom';
 
 import { ReactComponent as MagnifierIcon } from '@assets/icons/magnifier.icon.svg';
-import { Button, Input, Text } from '@components';
+import { Button, Header, Input, Layout, Text } from '@components';
 import { color } from '@styles/color';
 
 import UserList from './components/UserList';
 
 const HomePage = () => {
+  const navigate = useNavigate();
   const { keyword: submittedKeyword } = useParams();
-  const [keyword, setKeyword] = useState('');
+  const [keyword, setKeyword] = useState(submittedKeyword || '');
+
+  const handleDiscardSearch = useCallback(
+    () => navigate('/', { replace: true }),
+    [navigate]
+  );
 
   return (
-    <Wrapper>
-      <div className="search-section">
-        <Input className="w-full" onChange={setKeyword} value={keyword} />
-        <Link to={`/${keyword}`} replace>
-          <Button className="w-full">
-            <Text color="white">Search</Text>
-            <MagnifierIcon
-              width={20}
-              height={20}
-              color="white"
-              className="ml-2"
-            />
-          </Button>
-        </Link>
-      </div>
-      {submittedKeyword && (
-        <Text color="text300" className="mt-3">
-          Showing users for "{submittedKeyword}"
-        </Text>
-      )}
-      <hr className="mt-3 mb-6" />
-      <UserList />
-    </Wrapper>
+    <Layout>
+      <Header />
+      <Wrapper>
+        <div className="search-section">
+          <Input
+            value={keyword}
+            className="w-full"
+            onChange={setKeyword}
+            onDiscard={handleDiscardSearch}
+          />
+          <Link to={`/${keyword}`} replace>
+            <Button className="w-full">
+              <Text color="white">Search</Text>
+              <MagnifierIcon
+                width={20}
+                height={20}
+                color="white"
+                className="ml-2"
+              />
+            </Button>
+          </Link>
+        </div>
+        {submittedKeyword && (
+          <Text color="text300" className="mt-3">
+            Showing users for "{submittedKeyword}"
+          </Text>
+        )}
+        <hr className="mt-3 mb-6" />
+        <UserList />
+      </Wrapper>
+    </Layout>
   );
 };
 
