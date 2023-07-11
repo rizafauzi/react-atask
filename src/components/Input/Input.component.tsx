@@ -57,7 +57,9 @@ const InputWrapper = styled.div`
     right: 10px;
     position: absolute;
 
-    &L
+    &:hover {
+      cursor: pointer;
+    }
   }
 
   input {
