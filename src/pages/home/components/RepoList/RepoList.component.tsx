@@ -86,7 +86,7 @@ const RepoCard = styled.div`
   padding: 12px 18px;
   border-radius: 8px;
   transition: all 0.2s ease-in-out;
-  outline: solid 0.5px ${color.line100};
+  outline: solid 1px ${color.line100};
 
   .repo-label {
     width: 100%;

@@ -2,3 +2,5 @@
 vite.config.ts
 commitlint.config.js
 postcss.config.js
+tsconfig.node.json
+tsconfig.json

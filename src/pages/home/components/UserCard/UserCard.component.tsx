@@ -59,7 +59,7 @@ const UserCardWrapper = styled.div`
     transition: all 0.2s ease-out;
     justify-content: space-between;
     outline: solid 0px transparent;
-    border: solid 0.5px ${color.line200};
+    border: solid 1px ${color.line200};
 
     .arrow-expand {
       transition: all 0.2s ease-out;

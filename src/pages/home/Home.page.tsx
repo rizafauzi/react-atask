@@ -80,7 +80,7 @@ const Wrapper = styled.div`
     transition: all 0.2s ease-out;
     justify-content: space-between;
     outline: solid 0px transparent;
-    border: solid 0.5px ${color.line100};
+    border: solid 1px ${color.line100};
   }
 
   .data-empty {
@@ -91,7 +91,7 @@ const Wrapper = styled.div`
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    border: solid 0.5px ${color.line100};
+    border: solid 1px ${color.line100};
   }
 
   .search {

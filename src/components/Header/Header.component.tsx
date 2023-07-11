@@ -25,7 +25,7 @@ const HeaderWrapper = styled.div`
   justify-content: center;
   background: #ffffff5c;
   backdrop-filter: blur(6px);
-  border-bottom: solid 0.5px ${color.line200};
+  border-bottom: solid 1px ${color.line200};
 
   .header-content {
     display: flex;
