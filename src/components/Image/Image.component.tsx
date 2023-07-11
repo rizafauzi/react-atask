@@ -2,6 +2,9 @@ import { useState } from 'react';
 
 import { ReactComponent as ImageIcon } from '@assets/icons/image.icon.svg';
 import { color } from '@styles/color';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
+import classnames from 'classnames';
 
 interface ImageProps {
   alt: string;
@@ -35,14 +38,15 @@ const Image = ({
   }
 
   return (
-    <img
+    <LazyLoadImage
       alt={alt}
       src={src}
       width={width}
+      effect="blur"
       height={height}
       data-testid="image"
-      className={className}
       onError={() => setIsError(true)}
+      className={classnames(className, 'overflow-hidden')}
     />
   );
 };
