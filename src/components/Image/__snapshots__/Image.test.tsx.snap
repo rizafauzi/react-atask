@@ -5,25 +5,35 @@ exports[`matches snapshot 1`] = `
   "asFragment": [Function],
   "baseElement": <body>
     <div>
+      <span
+        class=" lazy-load-image-background blur"
+        style="color: transparent; display: inline-block; height: 30px; width: 30px;"
+      >
+        <img
+          alt="rizafauzi"
+          class="rounded-full overflow-hidden"
+          data-testid="image"
+          height="30"
+          src="https://avatars.githubusercontent.com/u/46235432?v=4"
+          width="30"
+        />
+      </span>
+    </div>
+  </body>,
+  "container": <div>
+    <span
+      class=" lazy-load-image-background blur"
+      style="color: transparent; display: inline-block; height: 30px; width: 30px;"
+    >
       <img
         alt="rizafauzi"
-        class="rounded-full"
+        class="rounded-full overflow-hidden"
         data-testid="image"
         height="30"
         src="https://avatars.githubusercontent.com/u/46235432?v=4"
         width="30"
       />
-    </div>
-  </body>,
-  "container": <div>
-    <img
-      alt="rizafauzi"
-      class="rounded-full"
-      data-testid="image"
-      height="30"
-      src="https://avatars.githubusercontent.com/u/46235432?v=4"
-      width="30"
-    />
+    </span>
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],

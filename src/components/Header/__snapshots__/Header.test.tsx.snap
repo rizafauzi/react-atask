@@ -6,7 +6,7 @@ exports[`matches snapshot 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="sc-hKwBBi eoiKfn"
+        class="sc-hKwBBi eJxigg"
         data-testid="header"
       >
         <div
@@ -29,7 +29,7 @@ exports[`matches snapshot 1`] = `
   </body>,
   "container": <div>
     <div
-      class="sc-hKwBBi eoiKfn"
+      class="sc-hKwBBi eJxigg"
       data-testid="header"
     >
       <div
