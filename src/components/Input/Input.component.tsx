@@ -67,7 +67,7 @@ const InputWrapper = styled.div`
     outline: none;
     padding: 6px 12px;
     border-radius: 6px;
-    border: solid 0.5px #00000052;
+    border: solid 1px #00000052;
     outline: solid 0px transparent;
     transition: all 0.2s ease-out;
 
@@ -76,7 +76,7 @@ const InputWrapper = styled.div`
     }
 
     &:focus {
-      border: solid 0.5px #000000b3;
+      border: solid 1px #000000b3;
     }
   }
 `;
