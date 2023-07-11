@@ -5,7 +5,7 @@ import svgr from 'vite-plugin-svgr';
 
 export default defineConfig({
   define: {
-    global: '({})',
+    // global: '({})',
   },
   plugins: [svgr(), react()],
   test: {
